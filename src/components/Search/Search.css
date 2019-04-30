@@ -14,7 +14,11 @@
   width: 100%;
   background-color: var(--main-color);
   border: none;
+  -webkit-border-radius:0px;
+  -webkit-appearance: none;
+
 }
+
 
 .search label, .search fieldset {
   height: 100%;
