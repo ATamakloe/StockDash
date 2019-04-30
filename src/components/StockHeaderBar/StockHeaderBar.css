@@ -1,0 +1,86 @@
+.StockHeaderBar {
+  display         : flex;
+  padding-top     : 1em;
+  padding-left    : 1em;
+  padding-right  : 1em;
+  color           : var(--font-color);
+  flex-flow       : column nowrap;
+  justify-content : space-between;
+  grid-area       : b;
+}
+
+.headerrow1,
+.headerrow2,
+.headerrow3 {
+  display   : flex;
+  width     : 99%;
+  flex-flow : row nowrap;
+}
+
+.headerrow1 {
+  justify-content : space-between;
+  align-items: center;
+}
+
+.headerrow3 {
+  justify-content: center;
+  padding-top: 0.3em;
+  font-weight: bold;
+}
+.stockname {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.savestock {
+  padding       : 0.4em;
+  color: var(--main-compliment);
+  border        : 0.1em solid var(--main-compliment);
+  border-radius : 0.2em;
+
+}
+
+.stockprice {
+  font-size: 1.5em;
+}
+
+.savestock:hover {
+  color        : var(--font-color);
+  background-color: var(--main-compliment);
+  border-color : var(--main-lighten);
+  cursor       : pointer;
+}
+
+.tab {
+  margin-right  : 3em;
+  padding       : 0.3em;
+  padding-left  : 0;
+  border-bottom: 0.05em solid var(--main-compliment);
+  text-transform: uppercase;
+}
+
+@media (max-width : 1080px) {
+  .StockHeaderBar {
+    padding-right : 0.5em;
+    padding-left  : 0.5em;
+  }
+  .headerrow1 {
+    margin-top: 0.3em;
+  }
+}
+
+@media
+  (max-width : 530px) {
+  .stockname{
+    font-size : 1em;
+  }
+
+  .stockprice {
+    font-size: 1.1em;
+  }
+
+  .tab {
+    font-size: 0.8em;
+  }
+}

@@ -1,0 +1,10 @@
+.mainpanel {
+  grid-area: c;
+  background-color: var(--main-color);
+  display: grid;
+  grid-template-areas: "a a a"
+                       "b b b"
+                       "c c c";
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 65vh 10vh 1fr;
+}

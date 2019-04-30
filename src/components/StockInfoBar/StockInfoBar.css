@@ -1,0 +1,6 @@
+.infobar {
+  background-color: var(--main-color);
+  grid-area:b;
+  display: flex;
+  flex-flow: row nowrap;
+}

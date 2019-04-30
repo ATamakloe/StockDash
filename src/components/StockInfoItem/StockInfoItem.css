@@ -1,0 +1,57 @@
+.infobox {
+  display         : flex;
+  max-width       : 33%;
+  color           : var(--font-color);
+  border          : 0.05em solid var(--light-border-color);
+  border-left     : none;
+  align-items     : center;
+  flex-basis      : 33%;
+  flex-flow       : column nowrap;
+  justify-content : space-around;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+
+.info {
+  display         : flex;
+  width           : 95%;
+  font-size       : 1em;
+  font-weight     : bold;
+  flex-flow       : row nowrap;
+  justify-content : space-between;
+}
+
+@media
+  (max-width : 700px) {
+  .info {
+    font-size : 0.75em;
+  }
+}
+
+
+@media
+  (max-width : 530px) {
+
+  .info {
+    font-size : 0.65em;
+  }
+
+  .infobox {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media
+  (max-width : 480px) {
+  .info {
+    font-size : 0.65em;
+  }
+}
+
+@media
+  (max-width : 350px) {
+  .info {
+    font-size : 0.5em;
+  }
+}

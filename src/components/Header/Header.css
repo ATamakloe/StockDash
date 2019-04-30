@@ -1,0 +1,38 @@
+header {
+  display          : flex;
+  position         : fixed;
+  height           : 100%;
+  width: 15%;
+  color            : var(--font-color);
+  background-color : var(--main-lighten);
+  align-items      : center;
+  flex-flow        : column nowrap;
+  justify-content  : flex-start;
+  grid-area        : a;
+}
+
+.logotext {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top    : 1em;
+  margin-bottom : 1em;
+}
+
+@media
+  (max-width : 1080px) {
+  header {
+    position       : inherit;
+    height: 50%;
+    width: auto;
+    padding-top    : 0.2em;
+    padding-bottom : 0.4em;
+    align-items    : center;
+    flex-flow      : row wrap;
+  }
+
+  .logotext {
+    display : none;
+  }
+}

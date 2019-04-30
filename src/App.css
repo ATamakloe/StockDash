@@ -1,33 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+
+
+:root {
+  --main-color   : rgb(7, 24, 47);
+  --main-compliment : rgb(200, 72, 0);
+  --main-lighten : rgba(32, 51, 78);
+  --font-color   : rgb(247, 247, 247);
+  --sub-font     : rgb(233, 233, 233);
+  --light-border-color:rgba(255, 255, 255, 0.31);
+  --heading-font : 'Roboto', sans-serif;
+  --body-font : 'Open Sans', sans-serif;
+}
+
 .App {
-  text-align: center;
+  display               : grid;
+  width                 : 100%;
+  background-color      : var(--main-color);
+  grid-template-columns : 15vw 1fr 1fr 1fr;
+  grid-template-rows    : 15vh 65vh 1fr;
+  grid-template-areas   : "a b b b"
+                          "a c c c"
+                          "d c c c";
+  font-family: var(--body-font);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media
+  (max-width : 1080px) {
+  .App {
+    grid-template-columns : 1fr 1fr 1fr;
+    grid-template-rows    : 12vh 15vh 1fr;
+    grid-template-areas   : "a a a"
+                            "b b b"
+                            "c c c";
   }
 }

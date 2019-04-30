@@ -1,0 +1,6 @@
+.graph {
+  grid-area: a;
+  background-color: var(--main-color);
+  height: 100%;
+  width: 100%;
+}

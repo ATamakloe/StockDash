@@ -1,0 +1,20 @@
+.logoimage {
+  padding-top: 2em;
+  height: 70px;
+}
+@media (max-width : 1080px) {
+  .logoimage {
+    padding: 0;
+    height: 3em;
+    width: 6em;
+  }
+}
+
+
+@media
+  (max-width : 530px) {
+  .logoimage{
+    height:3em;
+    width: 4em;
+  }
+}

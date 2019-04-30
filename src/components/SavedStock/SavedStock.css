@@ -1,0 +1,73 @@
+@keyframes highlight {
+  0%   {background-color:inherit;}
+  50%  {background-color: var(--main-compliment);}
+  100% {background-color: inherit;}
+}
+
+.savedstock {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  text-align: center;
+  height: 1.1em;
+  width: 100%;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-top: 0.05em solid var(--light-border-color);
+  border-bottom: 0.05em solid var(--light-border-color);
+  animation-name: highlight;
+  animation-duration: 2s;
+}
+
+.symbolandprice {
+  height: 100%;
+}
+
+.savedstock:hover {
+    cursor: pointer;
+    border-color:var(--main-compliment);
+    background-color: var(--main-compliment);
+}
+
+.symbolandprice {
+  flex-basis: 80%;
+}
+.delete {
+  height: 100%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  z-index: 3;
+  color: red;
+}
+
+@media (max-width : 1080px) {
+.savedstock {
+  border-top: none;
+  border-bottom: none;
+  border-right:0.05em solid var(--light-border-color);
+  }
+}
+
+@media
+  (max-width : 700px) {
+  .savestock {
+    font-size : 0.7em;
+  }
+}
+
+
+@media
+  (max-width : 530px) {
+  .savedstock {
+    font-size : 0.9em;
+  }
+}
+
+@media
+  (max-width : 340px) {
+  .savedstock {
+    font-size : 0.8em;
+  }
+}
