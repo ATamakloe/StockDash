@@ -9,10 +9,10 @@
   flex-flow: row nowrap;
   justify-content: space-around;
   text-align: center;
-  height: 1.1em;
+  height: 1em;
   width: 100%;
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   text-transform: capitalize;
   font-weight: bold;
   border-top: 0.05em solid var(--light-border-color);
