@@ -2,7 +2,7 @@ ul {
   grid-area: d;
   list-style-type: none;
   height: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -28,7 +28,7 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding-bottom: 0.2em;
+    align-items: center;
   }
 
   .savedstockheader {

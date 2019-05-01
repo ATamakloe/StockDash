@@ -8,11 +8,10 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  align-items: center;
   text-align: center;
-  height: 1em;
+  height: 3.8em;
   width: 100%;
-  padding-top: 1em;
-  padding-bottom: 1em;
   text-transform: capitalize;
   font-weight: bold;
   border-top: 0.05em solid var(--light-border-color);
@@ -21,9 +20,6 @@
   animation-duration: 2s;
 }
 
-.symbolandprice {
-  height: 100%;
-}
 
 .savedstock:hover {
     cursor: pointer;
@@ -32,18 +28,21 @@
 }
 
 .symbolandprice {
-  flex-basis: 80%;
+  flex-basis: 70%;
 }
+
 .delete {
   height: 100%;
   padding-left: 0.5em;
   padding-right: 0.5em;
-  z-index: 3;
+  z-index: 3 !important;
   color: red;
+  flex-basis: 30%;
 }
 
 @media (max-width : 1080px) {
 .savedstock {
+  height: 100%;
   border-top: none;
   border-bottom: none;
   border-right:0.05em solid var(--light-border-color);
@@ -52,22 +51,32 @@
 
 @media
   (max-width : 700px) {
-  .savestock {
-    font-size : 0.7em;
-  }
-}
-
-
-@media
-  (max-width : 530px) {
-  .savedstock {
+  .symbolandprice {
     font-size : 0.9em;
   }
+
+  .delete {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+  }
+}
+
+
+@media
+  (max-width : 560px) {
+  .savedstock {
+    font-size : 0.75em;
+  }
+
+  .delete {
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+  }
 }
 
 @media
-  (max-width : 340px) {
+  (max-width : 380px) {
   .savedstock {
-    font-size : 0.8em;
+    font-size : 0.65em;
   }
 }

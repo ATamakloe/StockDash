@@ -3,7 +3,7 @@ import './StockInfoBar.css';
 import StockInfoItem from '../StockInfoItem/StockInfoItem';
 
 const StockInfoBar = ({financials}) => {
-  let labelarr = ["Open","Close","Volume","MKT Cap","EPS","Beta","P/E","Yield","1YRange"];
+  let labelarr = ["Open","Close","Volume","MKT Cap","EPS","Beta","P/E","Yield","1YR"];
   let dataarr = [financials.open,financials.previous_close,financials.avg_volume,financials.market_cap,financials.eps,financials.beta,financials.pe_ratio,financials.forward_dividend_yield,financials.week_52_range];
   return (
     <div className="infobar">
