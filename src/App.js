@@ -29,7 +29,7 @@ class App extends Component {
 
     const timeSeries = await fetch(timeSeriesURL).then(data => data.json()).then(data => data.map(data => ({x:data.label, y:data.close})));
     const stockinfo = await fetch(stockinfoURL).then(data => data.json()).then(data => ({symbol:data.symbol, name:data.companyName, price:data.latestPrice}));
-    const financials = await fetch(financialURL).then(data => data.json()).then(data => data["Company financials summary"]);
+    const financials = await fetch(financialURL).then(data => data.json()).then(data => data["Company financials summary"]).catch(err => []);
     const news = await fetch(newsURL).then(data =>data.json()).then(data => data.articles.map(article => ( {source: article.source.name, title:article.title, url:article.url})))
 
 

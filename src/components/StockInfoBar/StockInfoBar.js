@@ -4,7 +4,11 @@ import StockInfoItem from '../StockInfoItem/StockInfoItem';
 
 const StockInfoBar = ({financials}) => {
   let labelarr = ["Open","Close","Volume","MKT Cap","EPS","Beta","P/E","Yield","1YR"];
-  let dataarr = [financials.open,financials.previous_close,financials.avg_volume,financials.market_cap,financials.eps,financials.beta,financials.pe_ratio,financials.forward_dividend_yield,financials.week_52_range];
+  let dataarr;
+
+  financials = financials.open ?
+  dataarr = [financials.open,financials.previous_close,financials.avg_volume,financials.market_cap,financials.eps,financials.beta,financials.pe_ratio,financials.forward_dividend_yield,financials.week_52_range]
+  : dataarr = Array(9).fill("N/A")
   return (
     <div className="infobar">
       <StockInfoItem labels={labelarr.slice(0,3)} data={dataarr.slice(0,3)}/>
