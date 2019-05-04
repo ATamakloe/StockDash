@@ -14,5 +14,3 @@ async function getData(ticker = "NFLX") {
 
   return {stockinfo:stockinfo, timeSeries:timeSeries, financials:financials, news:news};
 };
-
-console.log(getData("AMZN"));

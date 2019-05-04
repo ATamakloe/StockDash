@@ -1,27 +1,28 @@
-@import "url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto')";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+
 
 :root {
-  --main-color         : rgb(7, 24, 47);
-  --main-compliment    : rgb(200, 72, 0);
-  --main-lighten       : rgba(32, 51, 78);
-  --font-color         : rgb(247, 247, 247);
-  --sub-font           : rgb(233, 233, 233);
-  --light-border-color : rgba(255, 255, 255, 0.31);
-  --heading-font       : 'Roboto', sans-serif;
-  --body-font          : 'Open Sans', sans-serif;
+  --main-color   : rgb(7, 24, 47);
+  --main-compliment : rgb(200, 72, 0);
+  --main-lighten : rgba(32, 51, 78);
+  --font-color   : rgb(247, 247, 247);
+  --sub-font     : rgb(233, 233, 233);
+  --light-border-color:rgba(255, 255, 255, 0.31);
+  --heading-font : 'Roboto', sans-serif;
+  --body-font : 'Open Sans', sans-serif;
 }
 
 .App {
   display               : grid;
   width                 : 100%;
-  max-height            : 100vh;
   background-color      : var(--main-color);
-  font-family           : var(--body-font);
   grid-template-columns : 15vw 1fr 1fr 1fr;
   grid-template-rows    : 15vh 65vh 1fr;
   grid-template-areas   : "a b b b"
                           "a c c c"
                           "d c c c";
+  font-family: var(--body-font);
 }
 
 @media
