@@ -28,6 +28,7 @@
 }
 
 .symbolandprice {
+  padding:0.5em;
   flex-basis: 70%;
 }
 
