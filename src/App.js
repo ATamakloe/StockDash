@@ -5,8 +5,6 @@ import MainPanel from './components/MainPanel/MainPanel'
 import './App.css';
 import tickerlist from'../src/data/stockdata.json';
 
-const unibitKEY = "lSt08c96ezRk7n5aW-mYUllwJ-JTKysc";
-
 class App extends Component {
     state = {
     isLoaded:false,
@@ -23,13 +21,26 @@ class App extends Component {
   getData = async (ticker="NFLX") => {
 
     const timeSeriesURL = `https://api.iextrading.com/1.0/stock/${ticker}/chart/1d`;
-    const stockinfoURL = `https://api.iextrading.com/1.0/stock/${ticker}/quote`;
-    const financialURL = `https://api.unibit.ai/financials/summary/${ticker}?datatype=json&AccessKey=${unibitKEY}`;
+    const stockdataURL = `https://api.iextrading.com/1.0/stock/${ticker}/quote`;
     const newsURL = `https://newsapi.org/v2/everything?q=${ticker}&apiKey=ce59fbe555dd4b509f0f6d595d8ee7b3`;
 
     const timeSeries = await fetch(timeSeriesURL).then(data => data.json()).then(data => data.map(data => ({x:data.label, y:data.close})));
-    const stockinfo = await fetch(stockinfoURL).then(data => data.json()).then(data => ({symbol:data.symbol, name:data.companyName, price:data.latestPrice}));
-    const financials = await fetch(financialURL).then(data => data.json()).then(data => data["Company financials summary"]).catch(err => []);
+    const stockdata = await fetch(stockdataURL).then(data => data.json());
+    const stockinfo = {
+      "symbol":stockdata.symbol,
+      "name": stockdata.companyName,
+      "price": stockdata.latestPrice
+      };
+    const financials = {
+      "open":stockdata.open,
+      "close":stockdata.close,
+      "volume":`${(stockdata.latestVolume/1000).toFixed(0)}K`,
+      "mktcap":`${(stockdata.marketCap/1000000).toFixed(0)}M`,
+      "peRatio":stockdata.peRatio,
+      "change":stockdata.change,
+      "1YRH":stockdata.week52High,
+      "1YRL":stockdata.week52Low,
+      "YTD":stockdata.ytdChange.toFixed(2),}
     const news = await fetch(newsURL).then(data =>data.json()).then(data => data.articles.map(article => ( {source: article.source.name, title:article.title, url:article.url})))
 
 
